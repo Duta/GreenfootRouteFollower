@@ -5,7 +5,7 @@ import java.util.List;
 class RouteSegment {
 	private Point[] points;
 	private List<RouteSegment> nextPossibleRoutes;
-	
+
 	public RouteSegment(Point[] points) {
 		this.points = points;
 		nextPossibleRoutes = new ArrayList<RouteSegment>();
@@ -28,7 +28,7 @@ class RouteSegment {
 	}
 
 	public Point getPoint(int pointIndex) {
-		return points[pointIndex];
+		return pointIndex < points.length ? points[pointIndex] : null;
 	}
 	
 	public int getNumPoints() {
