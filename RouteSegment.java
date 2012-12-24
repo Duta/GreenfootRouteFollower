@@ -30,6 +30,10 @@ class RouteSegment {
 	public Point getPoint(int pointIndex) {
 		return points[pointIndex];
 	}
+	
+	public int getNumPoints() {
+	    return points.length;
+	}
 
 	public RouteSegment getRandomNextRoute() {
 		if(nextPossibleRoutes.isEmpty()) {
